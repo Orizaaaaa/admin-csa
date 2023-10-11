@@ -1,6 +1,7 @@
 import React from 'react'
 import { JustifyLeft } from 'react-bootstrap-icons'
 import { csaLogo } from '../../assets/image'
+import NavbarList from '../Fragment/NavbarList'
 
 function AuthLayout({ children }) {
     return (
@@ -14,15 +15,10 @@ function AuthLayout({ children }) {
                         </span>
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav mx-auto">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Features</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Pricing</a>
-                                </li>
+                                <NavbarList title={'Home'} condition={'active'} />
+                                <NavbarList title={'Features'} />
+                                <NavbarList title={'Pricing'} />
+
                             </ul>
                             <button className='btn' >Logout</button>
                         </div>
