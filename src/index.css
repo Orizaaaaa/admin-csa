@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
 nav {
   background: rgba(211, 202, 202, 0.3);
   backdrop-filter: blur(10px);
@@ -8,15 +10,32 @@ nav {
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: 0.4s;
-}
+  font-family: 'Inter', sans-serif;
+  width: 90%;
 
-.page-content {
-  background: linear-gradient(106.37deg, #068fff 29.63%, #92b6fa 51.55%, #e9eff3 90.85%);
-  min-height: 100vh;
-  padding-top: 80px;
 }
 
 nav .container-fluid span svg {
   width: 30px;
   height: 30px;
+}
+
+.navbar-content {
+  width: 100vw;
+}
+
+nav img {
+  height: 22px;
+}
+
+nav .btn {
+  background-color: #3F8CFF;
+  color: white;
+}
+
+.page-content {
+  min-height: 100vh;
+  padding: 80px 0px;
+  background: linear-gradient(106.37deg, #3F8CFF 29.63%, #92b6fa 51.55%, #a8580c 90.85%);
+
 }

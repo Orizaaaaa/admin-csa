@@ -4,7 +4,7 @@ import AuthLayout from '../component/Layout/AuthLayout'
 function Dasboard() {
     return (
         <AuthLayout>
-            Babayo
+
         </AuthLayout>
     )
 }
