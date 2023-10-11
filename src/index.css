@@ -1,0 +1,22 @@
+nav {
+  background: rgba(211, 202, 202, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+
+.page-content {
+  background: linear-gradient(106.37deg, #068fff 29.63%, #92b6fa 51.55%, #e9eff3 90.85%);
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+nav .container-fluid span svg {
+  width: 30px;
+  height: 30px;
+}
