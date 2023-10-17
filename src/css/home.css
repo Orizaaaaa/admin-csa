@@ -14,9 +14,9 @@
     font-weight: 600;
 }
 
-.card .d-flex img {
-    height: auto;
-    width: 400px;
+.card .row img {
+    width: 440px;
+    height: 290px;
     border-radius: 7px;
 }
 
@@ -39,7 +39,7 @@ h5 {
     background-color: #113946;
     border-radius: 5px;
     font-size: 12px;
-    max-width: 260px;
+
 }
 
 .button-action {
@@ -47,4 +47,34 @@ h5 {
     backdrop-filter: blur(10px);
     border-radius: 10px;
     padding: 20px;
+}
+
+@media screen and (max-width:1296px) {
+    .card .row img {
+        width: 400px;
+        margin: auto;
+        border-radius: 7px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .card .row img {
+        width: 500px;
+        height: 320px;
+        margin: auto;
+        border-radius: 7px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .card .row img {
+        width: 100%;
+        height: 320px;
+        margin: auto;
+        border-radius: 7px;
+    }
+
+    .card .card-body .row-cols-lg-4 {
+        justify-content: center;
+    }
 }

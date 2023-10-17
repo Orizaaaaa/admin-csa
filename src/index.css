@@ -5,11 +5,6 @@
   font-family: 'Quicksand', sans-serif;
 }
 
-/* --creambasic: #A3937D;
-      --creamcolor: #FFF5E0;
-      --green: #113946;
-      --blue: 113946; */
-
 nav {
   background: rgba(211, 202, 202, 0.3);
   backdrop-filter: blur(10px);
