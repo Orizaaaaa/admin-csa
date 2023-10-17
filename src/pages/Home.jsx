@@ -1,54 +1,63 @@
 import React from 'react'
 import AuthLayout from '../component/Layout/AuthLayout'
+import { ajax } from '../assets/image'
 
 function Home() {
     return (
         <AuthLayout>
-            <section className="home mx-auto">
-                <div className="row">
-                    <div className="col col-10">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td >Larry the Bird</td>
-                                    <td>@twitter</td>
-                                    <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="col-2">
-                        <div className="button-action d-grid gap-1">
-                            <button className='btn btn-danger' >DELETE</button>
-                            <button className='btn btn-primary' >UPDATE</button>
-                            <button className='btn btn-success' >CREATE</button>
+            <section className="home">
 
+                <div className="card mb-3" >
+                    <div className="d-flex">
+                        <img src={ajax} />
+                        <div className="card-body">
+
+                            <h5>Belajar Ajax</h5>
+                            <h6>id : 1</h6>
+                            <p>5 Materi</p>
+                            <hr />
+                            <div className="row row-cols-lg-4 row-cols-md-3 row-cols-2 gap-2">
+                                <div className="col ">
+                                    <span>Apa itu html </span>
+                                    <span >  : Link Youtube</span>
+                                </div>
+                                <div className="col ">
+                                    <span>Apa itu html </span>
+                                    <span >  : Link Youtube</span>
+                                </div>
+                                <div className="col ">
+                                    <span>Apa itu html </span>
+                                    <span >  : Link Youtube</span>
+                                </div>
+                                <div className="col ">
+                                    <span>Apa itu html </span>
+                                    <span >  : Link Youtube</span>
+                                </div>
+                                <div className="col ">
+                                    <span>Apa itu html </span>
+                                    <span >  : Link Youtube</span>
+                                </div>
+                                <div className="col ">
+                                    <span>Apa itu html </span>
+                                    <span >  : Link Youtube</span>
+                                </div>
+                            </div>
+
+                            <div className="button-action d-flex">
+                                <button className='btn btn-danger me-3' >DELETE</button>
+                                <button className='btn btn-primary' >UPDATE</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div className="button-action d-grid gap-1 mt-5">
+                    <button className='btn btn-success' >CREATE</button>
+                </div>
+
+
             </section>
-        </AuthLayout>
+        </AuthLayout >
     )
 }
 
