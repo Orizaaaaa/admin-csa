@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AuthLayout from '../component/Layout/AuthLayout'
 import { ajax } from '../assets/image'
 
 function Home() {
+
+    const [link, setLink] = useState(`https://www.youtube.com/embed/`);
+    const [inputValue, setInputValue] = useState('');
+
+    console.log(link);
+
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+        setLink(`https://www.youtube.com/embed/${e.target.value}`);
+    }
+
+
     return (
         <AuthLayout>
             <section className="home">
@@ -49,37 +61,44 @@ function Home() {
                                 <hr />
 
                                 <div className="row row-cols-lg-4 row-cols-md-3 row-cols-2 gap-2">
-                                    <div className="col ">
+                                    <div className="col" data-bs-toggle="modal"
+                                        data-bs-target="#updateMateri">
                                         <span>Apa itu html </span>
                                         <span >  : Link Youtube</span>
                                     </div>
-                                    <div className="col ">
+                                    <div className="col" data-bs-toggle="modal"
+                                        data-bs-target="#updateMateri">
                                         <span>Apa itu html </span>
                                         <span >  : Link Youtube</span>
                                     </div>
-                                    <div className="col ">
+                                    <div className="col" data-bs-toggle="modal"
+                                        data-bs-target="#updateMateri">
                                         <span>Apa itu html </span>
                                         <span >  : Link Youtube</span>
                                     </div>
-                                    <div className="col ">
+                                    <div className="col" data-bs-toggle="modal"
+                                        data-bs-target="#updateMateri">
                                         <span>Apa itu html </span>
                                         <span >  : Link Youtube</span>
                                     </div>
-                                    <div className="col ">
+                                    <div className="col" data-bs-toggle="modal"
+                                        data-bs-target="#updateMateri">
                                         <span>Apa itu html </span>
                                         <span >  : Link Youtube</span>
                                     </div>
-                                    <div className="col ">
+                                    <div className="col" data-bs-toggle="modal"
+                                        data-bs-target="#updateMateri">
                                         <span>Apa itu html </span>
                                         <span >  : Link Youtube</span>
                                     </div>
+
                                 </div>
 
                                 <div className="button-action d-flex">
                                     <button className='btn btn-danger me-3' >DELETE</button>
-                                    <button className='btn btn-success me-3'>UPDATE COURSE</button>
+                                    <button className='btn btn-success me-3' >UPDATE COURSE</button>
                                     <button className='btn btn-primary' data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal" >CREATE MATERI</button>
+                                        data-bs-target="#createMateri" >CREATE MATERI</button>
                                 </div>
                             </div>
                         </div>
@@ -88,65 +107,119 @@ function Home() {
 
 
 
-                <>
-
-
-                    <div
-                        className="modal fade"
-                        id="exampleModal"
-                        tabIndex={-1}
-                        aria-labelledby="exampleModallabel"
-                        aria-hidden="true"
-                    >
-                        <div className="modal-dialog modal-xl modal-dialog-centered">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <h1 className="modal-title fs-5" id="exampleModallabel">
-                                        Update
-                                    </h1>
-                                    <button
-                                        type="button"
-                                        className="btn-close"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
+                {/* update materi modal */}
+                <div
+                    className="modal fade "
+                    id="updateMateri"
+                    tabIndex={-1}
+                    aria-hidden="true"
+                >
+                    <div className="modal-dialog modal-xl modal-dialog-centered">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h1 className="modal-title fs-5" >
+                                    Update Materi
+                                </h1>
+                                <button
+                                    type="button"
+                                    className="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                />
+                            </div>
+                            <div className="modal-body">
+                                <div className="mb-3">
+                                    <label htmlFor="exampleInputEmail1" className="form-label">
+                                        Title Materi
+                                    </label>
+                                    <input
+                                        className="form-control w-75 shadow-none "
+                                        id="exampleInputEmail1"
+                                        aria-describedby="emailHelp"
                                     />
                                 </div>
-                                <div className="modal-body">
-                                    <div className="mb-3">
-                                        <label htmlFor="exampleInputEmail1" className="form-label">
-                                            Title Materi
-                                        </label>
-                                        <input
-                                            className="form-control w-75 shadow-none "
-                                            id="exampleInputEmail1"
-                                            aria-describedby="emailHelp"
-                                        />
+                                <div className="mb-3">
+                                    <label for="basic-url" className="form-label">Link Vidio From Youtube</label>
+                                    <div className="input-group">
+                                        <span className="input-group-text" id="basic-addon3">https://www.youtube.com/embed/</span>
+                                        <input onChange={handleInputChange} type="text" className="form-control shadow-none" id="basic-url" aria-describedby="basic-addon3 basic-addon4" />
                                     </div>
-                                    <div className="mb-3">
-                                        <label for="basic-url" className="form-label">Link Vidio From Youtube</label>
-                                        <div className="input-group">
-                                            <span className="input-group-text" id="basic-addon3">https://www.youtube.com/embed/</span>
-                                            <input type="text" className="form-control shadow-none" id="basic-url" aria-describedby="basic-addon3 basic-addon4" />
-                                        </div>
-                                    </div>
+                                </div>
 
-                                </div>
-                                <div className="modal-footer">
-                                    <button
-                                        type="button"
-                                        className="btn btn-secondary"
-                                        data-bs-dismiss="modal"
-                                    >
-                                        Close
-                                    </button>
-                                    <button type="button" className="btn btn-primary">
-                                        Save changes
-                                    </button>
-                                </div>
+                            </div>
+                            <div className="modal-footer">
+                                <button
+                                    type="button"
+                                    className="btn btn-danger"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Delete
+                                </button>
+                                <button type="button" className="btn btn-primary">
+                                    Save changes
+                                </button>
                             </div>
                         </div>
                     </div>
-                </>
+                </div>
+
+
+                {/* create materi modal */}
+                <div
+                    className="modal fade "
+                    id="createMateri"
+                    tabIndex={-1}
+                    aria-hidden="true"
+                >
+                    <div className="modal-dialog modal-xl modal-dialog-centered">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h1 className="modal-title fs-5" >
+                                    Create Materi
+                                </h1>
+                                <button
+                                    type="button"
+                                    className="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                />
+                            </div>
+                            <div className="modal-body">
+                                <div className="mb-3">
+                                    <label htmlFor="exampleInputEmail1" className="form-label">
+                                        Title Materi
+                                    </label>
+                                    <input
+                                        className="form-control w-75 shadow-none "
+                                        id="exampleInputEmail1"
+                                        aria-describedby="emailHelp"
+                                    />
+                                </div>
+                                <div className="mb-3">
+                                    <label for="basic-url" className="form-label">Link Vidio From Youtube</label>
+                                    <div className="input-group">
+                                        <span className="input-group-text" id="basic-addon3">https://www.youtube.com/embed/</span>
+                                        <input type="text" className="form-control shadow-none" id="basic-url" aria-describedby="basic-addon3 basic-addon4" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className="modal-footer">
+                                <button
+                                    type="button"
+                                    className="btn btn-secondary"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Close
+                                </button>
+                                <button type="button" className="btn btn-primary">
+                                    Save changes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
 
 
