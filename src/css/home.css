@@ -78,3 +78,14 @@ h5 {
         justify-content: center;
     }
 }
+
+form .input-group input::file-selector-button {
+    background-color: #12486B;
+    color: white;
+
+}
+
+form input {
+    box-shadow: none !important;
+    border: none !important;
+}
